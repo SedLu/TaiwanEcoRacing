@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>臺灣環保賽鴿</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { background: #000; width: 100%; font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif; }
+
+    /* 圖片區 */
+    .slides { display: flex; flex-direction: column; align-items: center; width: 100%; }
+    .slides img { display: block; width: 100%; max-width: 100%; vertical-align: bottom; }
+
+    /* 報名表預覽圖 */
+    .form-preview-section {
+      background: #1a1a2e;
+      width: 100%;
+      padding: 40px 24px 8px;
+      display: flex;
+      flex-direction: row;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .form-preview-section img {
+      max-width: 48%;
+      width: 100%;
+      border: 2px solid #444;
+      border-radius: 8px;
+    }
+    @media (max-width: 700px) {
+      .form-preview-section img { max-width: 100%; }
+    }
+
+    /* 下載按鈕區 */
+    .download-section {
+      background: #1a1a2e;
+      width: 100%;
+      padding: 48px 24px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+    }
+    .download-buttons {
+      display: flex;
+      flex-direction: row;
+      gap: 32px;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      max-width: 900px;
+    }
+    .btn-download {
+      flex: 1;
+      min-width: 260px;
+      max-width: 400px;
+      display: block;
+      background: linear-gradient(135deg, #e67e22, #d35400);
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      padding: 28px 20px;
+      border-radius: 12px;
+      border: 3px solid #f39c12;
+      box-shadow: 0 6px 20px rgba(230,126,34,0.5);
+      letter-spacing: 1px;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .btn-download:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(230,126,34,0.7);
+    }
+    .btn-download .icon { font-size: 36px; display: block; margin-bottom: 10px; }
+
+    /* 國基電腦事蹟 */
+    .achievements-section {
+      background: #0d1b2a;
+      width: 100%;
+      padding: 48px 24px 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .achievements-title {
+      color: #f0c040;
+      font-size: 32px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 24px;
+      letter-spacing: 3px;
+      border-bottom: 3px solid #f0c040;
+      padding-bottom: 16px;
+      width: 100%;
+      max-width: 900px;
+    }
+    .sub-title {
+      color: #fff;
+      font-size: 26px;
+      font-weight: bold;
+      text-align: center;
+      letter-spacing: 4px;
+      background: #1a3a6b;
+      width: 100%;
+      max-width: 900px;
+      padding: 14px 20px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+    }
+    .achievements-list {
+      max-width: 900px;
+      width: 100%;
+      list-style: none;
+      padding: 0;
+      margin-bottom: 8px;
+    }
+    .achievements-list li {
+      color: #e0e8f0;
+      font-size: 20px;
+      line-height: 1.8;
+      padding: 12px 0 12px 28px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      position: relative;
+    }
+    .achievements-list li::before {
+      content: "◆";
+      color: #f0c040;
+      position: absolute;
+      left: 0;
+      font-size: 14px;
+      top: 16px;
+    }
+    .achievements-list li:last-child { border-bottom: none; }
+  </style>
+</head>
+<body>
+  <!-- 11 張投影片圖片 -->
+  <div class="slides">
+    <img src="assets/vpr_1.jpg" alt="slide 1">
+    <img src="assets/vpr_2.jpg" alt="slide 2">
+    <img src="assets/vpr_3.jpg" alt="slide 3">
+    <img src="assets/vpr_4.png" alt="slide 4">
+    <img src="assets/vpr_5.jpg" alt="slide 5">
+    <img src="assets/vpr_6.jpg" alt="slide 6">
+    <img src="assets/vpr_7.jpg" alt="slide 7">
+    <img src="assets/vpr_8.jpg" alt="slide 8">
+    <img src="assets/vpr_9.jpg" alt="slide 9">
+    <img src="assets/vpr_10.jpg" alt="slide 10">
+    <img src="assets/vpr_11.jpg" alt="slide 11">
+  </div>
+
+  <!-- 報名表預覽圖 -->
+  <div class="form-preview-section">
+    <img src="assets/vpr_form1.jpg" alt="會員報名表">
+    <img src="assets/vpr_form2.jpg" alt="服務處報名表">
+  </div>
+
+  <!-- 下載報名表按鈕 -->
+  <div class="download-section">
+    <div class="download-buttons">
+      <a class="btn-download" href="assets/服務處報名表.xlsx" download="服務處報名表.xlsx">
+        <span class="icon">📥</span>
+        下載服務處報名表
+      </a>
+      <a class="btn-download" href="assets/會員報名表.xlsx" download="會員報名表.xlsx">
+        <span class="icon">📥</span>
+        下載會員報名表
+      </a>
+    </div>
+  </div>
+
+  <!-- 國基電腦事蹟 -->
+  <div class="achievements-section">
+    <div class="achievements-title">國基電腦股份有限公司</div>
+
+    <!-- 副標題：歷年事蹟 -->
+    <div class="sub-title">歷 年 事 蹟</div>
+    <ul class="achievements-list">
+      <li>72年 6月29日公司成立。</li>
+      <li>75年 至88年設立學甲區、麻豆區 證券資訊站（電視牆各兩面）。</li>
+      <li>75年 金防部、金門縣政府特准設立，金門特產中心專賣部。</li>
+      <li>76年 全臺第一家電玩機台 合格製造廠。</li>
+      <li>79年 開發全球第一套 電腦賓果、魔術盤遊戲機台 (含管理系統)。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;經濟部評鑑為娛樂類。內銷檢驗註冊第622001號。</li>
+      <li>89年 承包監察院網路伺服器，工作站規格。</li>
+      <li>89年 承包國立成功大學醫學院，手提GPS定位儀。</li>
+      <li>89年 獲得中華民國傑出企業領導人，金峰獎。</li>
+      <li>90年 內政部消防署，救災救護指揮派遣系統建議書。</li>
+      <li>90年 獲得資訊科技人才，金像獎。</li>
+      <li>90年 內政部委託代售，『臺灣地區地形圖及衛星地圖』。</li>
+      <li>90年 中華民國航空測量及遙感探測學會，委託代售『臺灣本島衛星影像地圖』。</li>
+      <li>91年 開發全球第一套，衛星監控導航管理系統，含電子地圖、車機 ( GPS 收發器 )。</li>
+      <li>91年 海巡署海洋巡防總局，（船隻）使用衛星監控導航系統。</li>
+      <li>92年 海巡署海岸巡防總局，（車輛）使用衛星監控導航系統。</li>
+      <li>93年 開發 掃街車、灑水車，全自動衛星監控管理系統。</li>
+      <li>93年 臺中縣、彰化縣、雲林縣、臺南縣、台東市，使用掃街車全自動衛星監控管理系統。</li>
+      <li>93年 開發車隊通報，衛星監控管理系統。</li>
+      <li>93年 南亞塑膠公司嘉義廠，使用車隊通報管理系統。</li>
+      <li>94年 交通部核發，電信管制射頻器材製造許可證。</li>
+      <li>94年 開發賽鴿管理系統含電子地圖。</li>
+      <li>95年 開發電子監控管理系統，含電子地圖、收發器、隨身收發器。</li>
+      <li>95年 法務部性侵犯，使用第一代 電子監控管理系統（亞洲唯一電子腳鐐）。</li>
+      <li>95年 中科院初期研發雄三飛彈製程時，由國基電腦公司提供。</li>
+      <li>95年 協助澎湖縣、台南縣、雲林縣遊藝場業者，申領營業執照及成立公會。</li>
+      <li>96年 電腦賓果魔術盤，轉換成 線上遊戲。</li>
+      <li>98年 開發運動彩劵快簽系統。</li>
+      <li>99年 開發臺灣環保賽鴿有獎比賽遊戲軟體。</li>
+      <li>臺南縣消防局，緊急防災救護資源管理系統，建議計劃書。</li>
+      <li>臺灣省彰化農田水利會，農田水利設施管理之地理資訊系統建立、計畫服務建議書。</li>
+      <li>臺南縣都市計劃，書圖管理、地理資訊系統、服務建議書。</li>
+      <li>臺北縣消防局，緊急防災救護、資源管理系統，建議計劃書。</li>
+      <li>臺北縣消防局，緊急防災救護GPS消防車、救護車、指揮派遣支援系統，建置計劃書。</li>
+    </ul>
+
+    <!-- 副標題：公司開發之產品 -->
+    <div class="sub-title" style="margin-top: 40px;">公 司 開 發 之 產 品</div>
+    <ul class="achievements-list">
+      <li>線上遊戲，電腦賓果魔術盤。</li>
+      <li>衛星監控導航管理系統，含硬體設備、電子地圖。</li>
+      <li>全自動掃街車、灑水車，衛星監控及計程管理系統，含硬體設備、電子地圖。</li>
+      <li>車隊定點通報管理系統，含硬體設備、電子地圖。</li>
+      <li>隨身收發器電子監控，含硬體設備、電子地圖（法務部性侵犯，第一代電子腳鐐）。</li>
+      <li>賽鴿管理系統，含電子地圖。</li>
+      <li>運動彩劵快簽系統。</li>
+      <li>線上遊戲，臺灣環保賽鴿 有獎比賽遊戲軟體。</li>
+    </ul>
+  </div>
+</body>
+</html>
